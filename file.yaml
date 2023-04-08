@@ -4,7 +4,7 @@
     tasks: 
       - name: Create a file under temp
         file:
-          path: /tmp/newfile 
+          path: /tmp/newfile.txt
           state: touch
         
     
