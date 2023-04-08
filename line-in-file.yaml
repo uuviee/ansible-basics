@@ -1,0 +1,11 @@
+---
+  - name: Add lines
+    hosts: localhost
+    tasks: 
+      - name: Adding lines
+        blockinfile:
+          path: /tmp/newfile.txt
+          block: |
+            This is line 1
+            This is line 2 
+        
