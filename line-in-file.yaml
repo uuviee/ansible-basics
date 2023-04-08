@@ -3,9 +3,9 @@
     hosts: localhost
     tasks: 
       - name: Adding lines
-        lineinfile:
+        blockinfile:
           path: /tmp/newfile.txt
-          line: "{{ item }}"
-        with_items:
-        - 'This is line 1'
-        - 'This is line 2'
+          block: |
+            This is line 1
+            This is line 2 
+        
