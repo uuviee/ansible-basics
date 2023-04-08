@@ -5,7 +5,7 @@
       - name: Adding lines
         lineinfile:
           path: /tmp/newfile.txt
-          line: This is line 1
-        lineinfile:
-          path: /tmp/newfile.txt
-          line: This is line 2
+          line: "{{ item }}"
+        with_items:
+        - 'This is line 1'
+        - 'This is line 2'
