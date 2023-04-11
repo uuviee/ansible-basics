@@ -1,0 +1,8 @@
+- name: Add Users
+  hosts: localhost
+  tasks:
+    user:
+      name: Bob
+      uid: 4400
+
+    
