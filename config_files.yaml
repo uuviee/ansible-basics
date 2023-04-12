@@ -6,14 +6,14 @@
         file: 
           path: /root/test_config1
           state: touch
-          mode: u+rw, g+wr, o=r   
+          mode: u=rw,g=rw,o=r
       - name: Adding files under root users
         file: 
           path: /root/test_config2
           state: touch
-          mode: u+rw, g+wr, o=r   
+          mode: u=rw,g=rw,o=r 
       - name: Adding files under root users
         file: 
           path: /root/test_config3
           state: touch
-          mode: u+rw, g+wr, o=r   
+          mode: u=rw,g=rw,o=r
