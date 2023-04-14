@@ -1,0 +1,17 @@
+---
+  - name: Install apache
+    hosts: 10.118.0.3
+    gather_facts: yes
+    tasks: 
+      - name: Install apache 
+        yum: 
+          name: httpd
+          state: latest 
+        when: ansible_pkg_mgr == "dnf"
+      - name: Start and enable apache
+        systemd:
+          name: httpd
+          state: started
+          enabled: yes
+        when: ansible_service_mgr == "systemd"
+      

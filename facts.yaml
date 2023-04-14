@@ -1,0 +1,9 @@
+---
+  - name: Checks and Prints the operation system of host1 
+    hosts: ungrouped
+    gather_facts: yes 
+    tasks: 
+      - name: Prints facts
+        debug: 
+          var: ansible_distribution
+          
